@@ -1,9 +1,10 @@
 #include <stdio.h>
 /**
- * main -Print out of data types in c
- * code by amunation
- * Return: 0
+ * main -Prints the size of various types based on
+ * the computer it is compiled and run on..
+ * Return: Always 0.
 */
+
 int main(void)
 
 {
