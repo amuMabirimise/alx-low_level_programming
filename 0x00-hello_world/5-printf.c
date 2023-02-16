@@ -3,7 +3,6 @@
  * main -Print line using printf
  *
  * Return:0
- *
 */
 int main(void)
 {
