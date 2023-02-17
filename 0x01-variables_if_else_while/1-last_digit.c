@@ -27,3 +27,4 @@ int main(void)
 	return (0);
 }
 
+gcc -Wall -pedantic -Werror -Wextra -std=gnu89 1-last_digit.c -o 1-last_digit
