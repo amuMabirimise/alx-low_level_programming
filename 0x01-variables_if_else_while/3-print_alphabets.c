@@ -8,7 +8,7 @@ int main(void)
 	char alphabet[26] = "abcdefghijklmnopqrstuvwxyz";
 	int letter;
 
-	for (letter = 0; letter < 26; letter++)
+	for (letter = 0; letter <'26'; letter++)
 	{
 		putchar(alphabet[letter]);
 	}
