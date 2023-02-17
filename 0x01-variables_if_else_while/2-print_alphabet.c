@@ -8,10 +8,10 @@
 
 int main(void)
 {
-	int char;
+	char d;
 
-	char = 'A';
-	if char < = 'Z'; ch++;
+	for (d = 'A'; d < = 'Z'; char++;)
+	putchar(d);
 	putchar('\n');
 	return (0);
 }
