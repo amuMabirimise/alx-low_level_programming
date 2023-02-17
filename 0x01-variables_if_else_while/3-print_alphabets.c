@@ -1,26 +1,15 @@
 #include<stdio.h>
-/**
- * main-  prints the alphabet in lowercase
- * Return: Always 0 (Succes)
- */
+#include <stdlib.h>
+#include <time.h>
+/* more headers goes there */
+
+/* betty style doc for function main goes there */
 int main(void)
 {
-	char c;
+	int n;
 
-	char d;
-
-	c = 'a';
-	d = 'A';
-	while 
-		(c <= 'z') {
-			putchar(c);
-			c++;
-		}
-	while
-		(d <= 'z') {
-			putchar(c);
-			d++;
-		}
-	return (0)
-	
+	srand(time(0));
+	n = rand() - RAND_MAX / 2;
+	/* your code goes there */
+	return (0);
 }
