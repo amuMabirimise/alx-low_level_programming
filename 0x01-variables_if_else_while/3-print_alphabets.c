@@ -1,19 +1,29 @@
 #include<stdio.h>
-#include<stdio.h>
 /**
  * main-  prints the alphabet in lowercase
- * Return: Always 0 (Succes)
-*/
+ * Return: 0
+ */
+
 int main(void)
 {
-	char alphabet[53] =["abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";]
-	int letter;
+        char c;
+        char d;
 
-	for (letter = 0; letter < 53; letter++)
-	{
-		putchar(alphabet[letter]);
-	}
-	putchar('\n');
-	return (0);
+        c = 'a';
+        d = 'A';
+        while
+                (c <= 'z')
+{
+        putchar(c);
+        c++;
+}
+        while
+                (d <= 'Z')
+{
+                        putchar(d);
+                        d++;
+                }
+        putchar('\n');
+        return (0);
 }
 
