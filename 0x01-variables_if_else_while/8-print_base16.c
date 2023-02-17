@@ -4,7 +4,7 @@
  *
  */
 
-int main(voi)
+int main(void)
 {
 	char c;
 
