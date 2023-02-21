@@ -7,7 +7,7 @@
 int main(void)
 {
 	int char;
-	for (char='A' ;char<='Z' ;char++'\n')
+	for (char ='A' ;char < ='Z' ;char++'\n')
 	putchar (char0;
 	return (0);
 }
