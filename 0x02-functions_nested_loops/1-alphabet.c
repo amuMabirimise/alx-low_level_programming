@@ -1,13 +1,15 @@
-#include <stdio.h>
+#include "main.h"
 /**
- * main - check the code.
+ * main - print all alaphabets
  *
  * Return: Always 0.
  */
-int main(void)
+void print_alphabet(void)
 {
-	int char;
-	for (char ='A' ;char < ='Z' ;char++'\n')
-	putchar (char0;
-	return (0);
+	char letter;
+
+	for (letter = 'a'; letter <= 'z'; letter++)
+		_putchar(letter);
+
+	_putchar('\n');
 }
