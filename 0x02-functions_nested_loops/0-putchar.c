@@ -15,7 +15,7 @@ putchar('t');
 putchar('c');
 putchar('h');
 putchar('e');
-putchar('r');
+putchar('a');
 putchar('\n');
 return (0);
 }
