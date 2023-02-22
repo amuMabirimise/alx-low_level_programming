@@ -9,8 +9,8 @@ int main(void)
 {
 	int i;
 
-		printf("Infinite loop incoming :(\n");
-	
+	printf("Infinite loop incoming :(\n");
+
 	i = 0;
 	/*
 	*while (i < 10)
@@ -19,7 +19,8 @@ int main(void)
 	*}
 	*/
 
-		printf("Infinite loop avoided! \\o/\n");
+	printf("Infinite loop avoided! \\o/\n");
 
 	return (0);
-} 
+}
+
