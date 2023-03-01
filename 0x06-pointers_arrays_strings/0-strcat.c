@@ -3,17 +3,18 @@
 
 /**
  * _strcat - A function that concatenates two strings
- *
- * Return: void
+ * @dest: first param
+ * @src: second param
+ * Return: a string
  */
 
-char *_strcat(char *dest, char *src, int n)
+char *_strcat(char *dest, char *src)
 {
-	int s1
-	int s2
+	int s1;
+	int s2;
 
 	s1 = 0;
-	while (dest[s1]!= '\0')
+	while (dest[s1] != '\0')
 	{
 		s1++;
 	}
