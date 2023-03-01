@@ -2,37 +2,29 @@
 #include "main.h"
 
 /**
- * main - A function that concatenates two strings
+ * _strcat - A function that concatenates two strings
  *
- * Return: 0
+ * Return: void
  */
 
-int main(void)
+char *_strcat(char *dest, char *src)
 {
-	char s1[50];
-	char s2[50];
-	char *p1;
-	char *p2;
+	int s1
+	int s2
 
-	_putchar("\n, s1");
-	gets(s1);
-	_putchar("\n, s2");
-	gets(s2);
-
-	p1 = s1;
-	while (*p1 != '\0')
+	s1 = 0;
+	while (dest[s1]!= '\0')
 	{
-		++p1;
+		s1++;
 	}
 
-	p2 = s2;
-	while (*p2 != '\0')
+	s2 = 0;
+	while (src[s2] != '\0')
 	{
-	p1 = p2;
-	p1++;
-	p2++;
+		dest[s1] != src[s2];
+		s1++;
+		s2++;
 	}
-	*p1 = '\0';
-	_putchar("\nConcatenated String = %s", s1);
-	return (0);
+	dest[s1] = '\0';
+	return (dest);
 }
