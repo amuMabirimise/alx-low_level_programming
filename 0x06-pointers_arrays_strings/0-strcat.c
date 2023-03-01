@@ -20,19 +20,19 @@ int main(void)
 	gets(s2);
 
 	p1 = s1;
-	while(*p1 != '\0')
+	while (*p1 != '\0')
 	{
 		++p1;
 	}
 
 	p2 = s2;
-	while(*p2 != '\0')
+	while (*p2 != '\0')
 	{
-		*p1 = *p2;
-		p1++;
-		p2++;
+	p1 = p2;
+	p1++;
+	p2++;
 	}
 	*p1 = '\0';
 	_putchar("\nConcatenated String = %s", s1);
-	return 0;
+	return (0);
 }
