@@ -3,6 +3,7 @@
  * *_strncpy - function should work exatly like strncpy
  * @src: the source string to append to
  * @dest: the destiation string to be concatenated upon
+ * @n: valua
  *
  * Return:pointer to the resulting string
 */
