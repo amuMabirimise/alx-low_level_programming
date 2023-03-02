@@ -5,23 +5,30 @@
  * @str: The string to be capitalized.
  * Return: A pointer to the changed string.
  */
+#include <ctype.h>
+#include <string.h>
 
 char *cap_string(char *str)
 {
-	int i;
 	int len = strlen(str);
+	int i;
 
+	if (len > 0 && islower(str[0]))
+	{
 	str[0] = toupper(str[0]);
+	}
 
 	for (i = 1; i < len; i++)
 	{
-	if (str[i - 1] == ' ' || str[i - 1] == '\t' || str[i - 1] == '\n' ||
-	str[i - 1] == ' , ' || str[i - 1] == ';' || str[i - 1] == '. ' ||
-	str[i - 1] == ' ! ' || str[i - 1] == '?' || str[i - 1] == '"' ||
-	str[i - 1] == ' ( ' || str[i - 1] == ')' || str[i - 1] == '{' ||
-	str[i - 1] == '}')
+	if (isspace(str[i - 1]) || str[i - 1] == ',' ||
+	str[i - 1] == ';' || str[i - 1] == '.' ||
+	str[i - 1] == '!' || str[i - 1] == '?' ||
+	str[i - 1] == '"' || str[i - 1] == '(' ||
+	str[i - 1] == ')' || str[i - 1] == '{' || str[i - 1] == '}') {
+	if (islower(str[i]))
 	{
 	str[i] = toupper(str[i]);
+	}
 	}
 	}
 
