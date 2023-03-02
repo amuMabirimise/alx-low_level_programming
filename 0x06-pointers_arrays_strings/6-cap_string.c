@@ -9,23 +9,23 @@
 
 char *cap_string(char *str)
 {
-	int len = strlen(str);
-	int cap_next = 1;
+	int i;
 
-	for (int i = 0; i < len; i++)
+	if (str[0] != '\0')
 	{
-	if (cap_next && isalpha(str[i]))
-	{
-	str[i] = toupper(str[i]);
-	cap_next = 0;
+	str[0] = toupper(str[0]);
 	}
-	else if (str[i] == ' ' || str[i] == '\t' || str[i] == '\n' || str[i] == ',' ||
-		str[i] == ';' || str[i] == '.' || str[i] == '!' || str[i] == '?' ||
-		str[i] == '"' || str[i] == '(' || str[i] == ')' || str[i] == '{' ||
-		str[i] == '}') {
-		cap_next = 1;
+
+	for (i = 1; str[i] != '\0'; i++)
+	if (str[i - 1] == ' ' || str[i - 1] == '\t' || str[i - 1] == '\n' ||
+	str[i - 1] == ',' || str[i - 1] == ';' || str[i - 1] == '.' ||
+	str[i - 1] == '!' || str[i - 1] == '?' || str[i - 1] == '"' ||
+	str[i - 1] == '(' || str[i - 1] == ')' || str[i - 1] == '{' ||
+	str[i - 1] == '}') {
+	str[i] = toupper(str[i]);
 	}
 	}
 
 	return (str);
 }
+
