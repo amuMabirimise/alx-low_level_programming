@@ -5,7 +5,6 @@
  * _strchr - Returns a pointer to the first occurrence
  * @s: value
  * @c: value
- * @null: value
  * Return: Always 0.
  */
 char *_strchr(char *s, char c)
@@ -22,5 +21,5 @@ char *_strchr(char *s, char c)
 	{
 	return (s);
 	}
-	return (c);
+	return ('\0');
 }
