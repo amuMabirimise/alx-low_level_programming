@@ -4,25 +4,32 @@
 
 /**
  * _strstr - Entry point
- * _strpbrk - eneryg point
  * @haystack: input
  * @needle: input
  * Return: Always 0
  */
-char *_strpbrk(char *s, char *accept)
+char *_strstr(char *haystack, char *needle)
 {
-	for (; *haystack != '\0': haystack++)
-		char *one = haystack;
-	char *two = needle;
-
-	while (*one == *two && *two != '\0')
+	if (*needle == '\0')
 	{
-		one++;
-		two++;
+	return (haystack);
 	}
+	while (*haystack != '\0')
+	{
 
-	if (*two == '\0')
-		return (haystack);
+	char *h = haystack;
+	char *n = needle;
+
+	while (*n != '\0' && *h == *n)
+	{
+	h++;
+	n++;
 	}
-	return (Null);
+	if (*n == '\0')
+	{
+	return (haystack);
+	}
+	haystack++;
+	}
+	return (NULL);
 }
