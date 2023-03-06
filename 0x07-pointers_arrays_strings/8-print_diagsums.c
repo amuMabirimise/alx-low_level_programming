@@ -1,22 +1,19 @@
-#include <stdio.h>
 #include "main.h"
-#include "_putchar.c"
-
+#include "_putchar"
 /**
- * print_diagsums - Entry point
- * @a: input
- * @size: input
- * Return: Always 0
+ * print_chessboard - Entry point
+ * @a: array
+ * Return: Always 0 (Success)
  */
-
-void print_diagsums(int *a, int size)
+void print_chessboard(char (*a)[8])
 {
-	int i, n, sum1 = 0, sum2 = 0;
+	int i;
+	int j;
 
-	for (i = 0; i <= (size * size); i = i + size + 1)
-		sum1 =  sum1 + a[i];
-
-	for (n = size - 1; n <= (size * size) - size; n = n + size - 1)
-	sum2 = sum2 + a[n];
-	printf("%d, %d\n", sum1, sum2);
+	for (i = 0; i < 8; i++)
+	{
+		for (j = 0; j < 8; j++)
+			_putchar(a[i][j]);
+		_putchar('\n');
+	}
 }
