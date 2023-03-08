@@ -1,10 +1,11 @@
 #include <stdio.h>
 #include "main.h"
 /**
- * _sqrt_recursion - a function that returns the natural square root of a number
+ * _sqrt_recursion - returns the natural square root of a number
  * @n: input
  * @low: input
  * @high: input
+ * _sqrt: calculate natural square root
  *
  * Return: Always 0.
  */
@@ -35,6 +36,7 @@ int _sqrt_helper(int n, int low, int high)
 	}
 
 	int mid = (low + high) / 2;
+
 	if (mid * mid == n)
 	{
 	return (mid);
