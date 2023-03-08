@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "main.h"
+#include <strings.h>
 /**
  * int factorial - function that returns the factorial of given number
  * @n: input
