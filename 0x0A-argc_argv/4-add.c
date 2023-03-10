@@ -1,8 +1,3 @@
-#include <stdio.h>
-#include "main.h"
-#include <stdlib.h>
-#include <ctype.h>
-#include <string.h>
 #include "main.h"
 /**
  * main - main function
