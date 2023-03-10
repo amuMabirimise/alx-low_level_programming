@@ -14,27 +14,32 @@
 int main(int argc, char *argv[])
 {
 	int sum = 0;
+	int i = 1;
 
 	if (argc == 1)
 	{
 	printf("0\n");
 	return (0);
 	}
-	for (int i = 1; i < argc; i++)
-	{
-	char *s = argv[i];
-	int j = 0;
 
-	while (s[j])
+	while (i < argc)
 	{
-	if (!isdigit(s[j]))
+	for (int j = 0; argv[i][j] != '\0'; j++)
+	{
+	if (!isdigit(argv[i][j]))
 	{
 	printf("Error\n");
 	return (1);
 	}
-	j++;
 	}
-	sum += atoi(s);
+
+	int num = atoi(argv[i]);
+
+	if (num > 0)
+	{
+	sum += num;
+	}
+	i++;
 	}
 	printf("%d\n", sum);
 	return (0);
