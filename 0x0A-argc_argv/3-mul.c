@@ -1,26 +1,36 @@
-#include <stdio.h>
 #include "main.h"
-#include <stdlib.h>
 /**
- * main - multiplies two numbers
- * @argc: number of arguments
- * @argv: array of arguments
- * Return: 0, 1 (Error)
+ * main - main function
+ * @argc: first parameter
+ * @argv: second parameter
+ *Return: 0
  */
 
 int main(int argc, char *argv[])
 {
-	int num1, num2;
+	int j = 0;
+	int sum = 0;
+	int i = 1;
 
-	if (argc != 3)
+	if (argc < 2)
+	{
+	printf("0\n");
+	return (0);
+	}
+	while (i < argc)
+	{
+	while (argv[i][j] != '\0')
+	{
+	if (argv[i][j] < '0' || argv[i][j] > '9')
 	{
 	printf("Error\n");
 	return (1);
 	}
-	num1 = atoi(argv[1]);
-	num2 = atoi(argv[2]);
+	j++;
+	}
+	sum += atoi(argv[i]);
+	i++;
+	}
 
-	printf("%d\n", num1 * num2);
-
-	return (0);
+	printf("%d\n", sum);
 }
