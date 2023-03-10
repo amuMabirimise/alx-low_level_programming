@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "main.h"
 /**
  * main - main function
@@ -29,9 +30,10 @@ int main(int argc, char *argv[])
 	}
 	j++;
 	}
-	sum += atoi(argv[i]);
+	sum += _atoi(argv[i]);
 	i++;
 	}
 
 	printf("%d\n", sum);
+	return (0);
 }
