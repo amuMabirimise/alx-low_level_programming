@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <ctype.h>
 #include <string.h>
+#include "main.h"
 /**
  * main - a program that adds postive positive numbers
  * @argc: Count arguments
