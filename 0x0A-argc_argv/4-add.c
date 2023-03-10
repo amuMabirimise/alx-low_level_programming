@@ -3,11 +3,13 @@
 #include <ctype.h>
 #include <string.h>
 #include "main.h"
+
 /**
  * main - a program that adds postive positive numbers
  * @argc: Count arguments
  * @argv: Arguments
- *
+ * check_num - check - string there are digit
+ * @str: array str
  * Return: 0
 */
 
