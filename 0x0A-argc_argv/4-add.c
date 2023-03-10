@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "main.h"
 #include <ctype.h>
-#include <string.h>
+#include <stdlib.h>
 /**
  * main - main function
  * @argc: first parr
