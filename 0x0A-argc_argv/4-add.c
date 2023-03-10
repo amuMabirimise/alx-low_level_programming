@@ -1,22 +1,18 @@
-
-#include <stdio.h>
-#include <stdlib.h>
-#include <ctype.h>
-#include <string.h>
 #include "main.h"
 /**
- * main - prints a function str
- * @argv: value
- * @argc: input
- * Return: Always 0
-*/
+ * main - main function
+ * @argc: first parr
+ * @argv: second parr
+ *Return: 0
+ */
 
 int main(int argc, char *argv[])
 {
+	int j = 0;
 	int sum = 0;
 	int i = 1;
 
-	if (argc == 1)
+	if (argc < 2)
 	{
 	printf("0\n");
 	return (0);
@@ -24,23 +20,18 @@ int main(int argc, char *argv[])
 
 	while (i < argc)
 	{
-	for (int j = 0; argv[i][j] != '\0'; j++)
+	while (argv[i][j] != '\0')
 	{
-	if (!isdigit(argv[i][j]))
+	if (argv[i][j] < '0' || argv[i][j] > '9')
 	{
 	printf("Error\n");
 	return (1);
 	}
+	j++;
 	}
-
-	int num = atoi(argv[i]);
-
-	if (num > 0)
-	{
-	sum += num;
-	}
+	sum += atoi(argv[i]);
 	i++;
 	}
+
 	printf("%d\n", sum);
-	return (0);
 }
