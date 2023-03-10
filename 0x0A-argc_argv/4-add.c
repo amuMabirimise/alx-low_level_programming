@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <ctype.h>
 #include <string.h>
+#include "main.h"
 /**
  * main - main function
  * @argc: first parr
@@ -33,10 +34,9 @@ int main(int argc, char *argv[])
 	}
 	j++;
 	}
-	sum += _atoi(argv[i]);
+	sum += atoi(argv[i]);
 	i++;
 	}
 
 	printf("%d\n", sum);
-	return (0);
 }
