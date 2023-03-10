@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <ctype.h>
 #include <string.h>
+#include "main.h"
 /**
  * main - prints a function str
  * @argv: value
@@ -10,11 +11,15 @@
  * Return: Always 0
 */
 
-int  main(int argc, char *argv[])
+int main(int argc, char *argv[])
 {
 	int sum = 0;
-	int str = 0;
 
+	if (argc == 1)
+	{
+	printf("0\n");
+	return (0);
+	}
 	for (int i = 1; i < argc; i++)
 	{
 	char *s = argv[i];
