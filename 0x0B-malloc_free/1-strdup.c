@@ -4,7 +4,7 @@
 #include <string.h>
 
 /**
- * _strdup - check the code for ALX School students.
+ * _strdup - returns a pointer to a newly allocated space in memory
  * @str: dynamic value
  *
  * Return: dup
