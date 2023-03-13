@@ -1,34 +1,44 @@
 #include "main.h"
-#include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
-
 /**
- * str_concat - check the code for ALX School students.
- * @s1: value
- * @s2: value
- * Return: Always 0.
+ * str_concat - get ends of input and add together for size
+ * @s1: input one to concat
+ * @s2: input two to concat
+ * Return: concat of s1 and s2
  */
-
 char *str_concat(char *s1, char *s2)
 {
-	if (!s1) s1 = "";
+	char *conct;
 
-	if (!s2) s2 = "";
+	int i, ci;
 
-	size_t s1_len = strlen(s1);
-	size_t s2_len = strlen(s2);size_t s2_len = strlen(s2);
-	char *result = malloc(s1_len + s2_len + 1);
+	if (s1 == NULL)
+	s1 = "";
+	if (s2 == NULL)
+	s2 = "";
+	i = ci = 0;
+	while (s1[i] != '\0')
+	i++;
+	while (s2[ci] != '\0')
+	ci++;
+	conct = malloc(sizeof(char) * (i + ci + 1));
 
-	if (!s1) s1 = "";
-	if (!s2) s2 = "";
+	if (conct == NULL)
+	return (NULL);
+	i = ci = 0;
 
-	if (!result) return (NULL);
+	while (s1[i] != '\0')
+	{
+	conct[i] = s1[i];
+	i++;
+	}
 
-	memcpy(result, s1, s1_len);
-	memcpy(result + s1_len, s2, s2_len);
+	while (s2[ci] != '\0')
+	{
+	conct[i] = s2[ci];
+	i++, ci++;
+	}
+	conct[i] = '\0';
+	return (conct);
 
-	result[s1_len + s2_len] = '\0';
-
-	return (result);
 }
