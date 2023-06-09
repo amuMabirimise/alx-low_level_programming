@@ -5,7 +5,7 @@
  * main - printsa arguments
  * @argc: numbers of argc
  * @argv: array of argc
- * REturn: Always 0
+ * Return: Always 0
  */
 
 int main(int argc, char *argv[])
