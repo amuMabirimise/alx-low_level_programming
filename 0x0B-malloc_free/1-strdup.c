@@ -7,22 +7,21 @@
  * @str: char
  * Return: 0
  */
-char* _strdup(char* str)
+char *_strdup(char *str)
 {
 	size_t length = strlen(str) + 1;
-	char* new_str = (char*)malloc(length * sizeof(char));
+	char *new_str = (char *)malloc(length * sizeof(char));
 
 	if (str == NULL)
 	{
 	return (NULL);
 	}
-    
-    
+
 	if (new_str == NULL)
 	{
 	return (NULL);
 	}
-    
+
 	strcpy(new_str, str);
 	return (new_str);
 }
