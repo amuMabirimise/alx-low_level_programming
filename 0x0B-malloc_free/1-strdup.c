@@ -9,22 +9,16 @@
  */
 char *_strdup(char *str)
 {
-	size_t length = strlen(str);
-	char *new_str;
+	size_t len = strlen(str);
+	char *duplicate;
 
 	if (str == NULL)
-	{
+		return NULL;
+	duplicate = (char *)malloc((len + 1) * sizeof(char));
+	if (duplicate == NULL)
 		return (NULL);
-	}
 
-	new_str = (char *)malloc((length + 1) * sizeof(char));
+	strcpy(duplicate, str);
+	return (duplicate);
 
-	if (new_str == NULL)
-	{
-		return (NULL);
-	}
-
-	strcpy(new_str, str);
-
-	return (new_str);
 }
