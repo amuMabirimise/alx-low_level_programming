@@ -1,46 +1,53 @@
-#include <stdio.h>
+#include "main.h"
 #include <stdlib.h>
-#include <string.h>
+#include <stdio.h>
 /**
- * str_concat - get ends of input and add together for size
- * @s1: input one to concat
- * @s2: input two to concat
- * Return: concat of s1 and s2
+ * str_concat-  concatenates two strings
+ * @s1: string 1
+ * @s2: string 2
+ * Return: pointer should point to a newly allocated space in memory
+ * which contains the contents of s1
+ * followed by the contents of s2, and null terminated
  */
-
 char *str_concat(char *s1, char *s2)
 {
-	size_t len1 = strlen(s1);
-	size_t len2 = strlen(s2);
-	char *concat;
-	char *dest;
+	int len_s1 = 0, len_s2 = 0;
+	char *new_array, *ptr;
 
 	if (s1 == NULL)
-		s1 = "";
+	s1 = "";
 	if (s2 == NULL)
-		s2 = "";
-	concat = (char *)malloc((len1 + len2 + 1) * sizeof(char));
+	s2 = "";
 
-	if (concat == NULL)
-		return (NULL);
+	while (s1[len_s1] != '\0')
+	len_s1++;
 
-	dest = concat;
+	while (s2[len_s2] != '\0')
+	len_s2++;
+
+	new_array = malloc((len_s1 + len_s2 + 1) * sizeof(char));
+	if (new_array == NULL)
+	{
+	return (NULL);
+	}
+
+	ptr = new_array;
 
 	while (*s1 != '\0')
 	{
-		*dest = *s1;
-		dest++;
-		s1++;
+	*ptr = *s1;
+	ptr++;
+	s1++;
 	}
 
 	while (*s2 != '\0')
 	{
-		*dest = *s2;
-		dest++;
-		s2++;
+	*ptr = *s2;
+	ptr++;
+	s2++;
 	}
 
-	*dest = '\0';
+	*ptr = '\0';
 
-	return (concat);
+	return (new_array);
 }
