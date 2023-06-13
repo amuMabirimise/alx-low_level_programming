@@ -10,24 +10,37 @@
 
 char *str_concat(char *s1, char *s2)
 {
-	size_t len1 = strlen(s1);
-	size_t len2 = strlen(s2);
-	char *concat;
-	const char *empty = "";
+	char *conct;
+	int i, ci;
+	i = ci = 0;
 
-	const char *str1 = s1 != NULL ? s1 : empty;
-	const char *str2 = s2 != NULL ? s2 : empty;
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
 
-	concat = (char *)malloc((len1 = len2 + 1)* sizeof(char));
+	while (s1[i] != '\0')
+		i++;
+	while (s2[ci] != '\0')
+		ci++;
 
-	if (concat == NULL)
+	conct = malloc(sizeof(char) * (i + ci + 1));
+
+		if (conct == NULL)
+			return (NULL);
+
+	while (s1[i] != '\0')
 	{
-		printf("Memory allocation failed.\n");
-		return (NULL);
+		conct[i] = s1[i];
+		i++;
 	}
 
-	strcpy(concat, str1);
-	strcat(concat, str2);
+	while (s2[ci] != '\0')
+	{
+		conct[i] = s2[ci];
+		i++, ci++;
+	}
+	conct[i] = '\0';
 
-	return (concat);
+	return (conct);
 }

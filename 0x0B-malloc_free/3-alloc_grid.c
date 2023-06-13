@@ -10,44 +10,46 @@
 
 int **alloc_grid(int width, int height)
 {
-	int **amu;
-	int x,y;
-	x = 0;
-	y = 0;
+	int **mee;
+	int x = 0, y;
 
 	if (width <= 0 || height <= 0)
 		return (NULL);
 
-	amu = malloc(sizeof(int *) * height);
+	mee = malloc(sizeof(int *) * height);
 
-	if (amu == NULL)
+	if (mee == NULL)
 		return (NULL);
-
 	while (x < height)
 	{
-		amu[x] = malloc(sizeof(int) * width);
-		x++;
-
-		if (amu[x] == NULL)
+		mee[x] = malloc(sizeof(int) * width);
+	       
+	if (mee[x] == NULL)
+	{
+		while (x > 0)
 		{
-			while (x >= 0)
-			{
-				free(amu[x]);
-				x--;
-			}
-			free(amu);
-			return (NULL);
+			free(mee[x -1]);
+			x--;
 		}
-		x++;
+		free(mee);
+		return (NULL);
 	}
+	x++;
+	
+	}
+
+	x = 0;
+
 	while (x < height)
 	{
-		while (y < width)
+		y = 0;
+		while(y < width)
 		{
-			amu[x][y] = 0;
+			mee[x][y] = 0;
 			y++;
 		}
 		x++;
 	}
-	return (amu);
+
+	return (mee);
 }
