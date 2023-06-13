@@ -10,21 +10,21 @@
 char *_strdup(char *str)
 {
 	size_t length = strlen(str);
-	char *duplicate;
+	char *new_str;
 
 	if (str == NULL)
 	{
 		return (NULL);
 	}
 
-	duplicate = (char *)malloc((length + 1) * sizeof(char));
+	new_str = (char *)malloc((length + 1) * sizeof(char));
 
-	if (duplicate == NULL)
+	if (new_str == NULL)
 	{
 		return (NULL);
 	}
 
-	strcpy(duplicate, str);
+	strcpy(new_str, str);
 
-	return (duplicate);
+	return (new_str);
 }
