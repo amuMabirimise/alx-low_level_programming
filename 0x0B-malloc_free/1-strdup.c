@@ -9,19 +9,22 @@
  */
 char *_strdup(char *str)
 {
-	size_t length = strlen(str) + 1;
-	char *new_str = (char *)malloc(length * sizeof(char));
+	char *aaa;
+	int i, r = 0;
 
 	if (str == NULL)
-	{
-	return (NULL);
-	}
+		return (NULL);
+	i = 0;
+	while (str[i] != '\0')
+		i++;
+	aaa = malloc(sizeof(char) * (i + 1));
 
-	if (new_str == NULL)
+	if (aaa == NULL)
+		return (NULL);
+	while (str[r])
 	{
-	return (NULL);
+		iaaa[r] = str[r];
+		r++;
 	}
-
-	strcpy(new_str, str);
-	return (new_str);
+	return (aaa);
 }

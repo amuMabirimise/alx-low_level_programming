@@ -12,7 +12,7 @@ char *str_concat(char *s1, char *s2)
 {
 	size_t length_s1 = strlen(s1);
 	size_t lenght_s2 = strlen(s2);
-	char *concatenated = (char *)malloc((length_s1 + lenght_s2 + 1) * sizeof(char));
+	char *concat = (char *)malloc((length_s1 + lenght_s2 + 1) * sizeof(char));
 
 	if (s1 == NULL)
 	{
@@ -23,13 +23,13 @@ char *str_concat(char *s1, char *s2)
 		s2 = "";
 	}
 
-	if (concatenated == NULL)
+	if (concat == NULL)
 	{
 		return (NULL);
 	}
 
-	strcpy(concatenated, s1);
-	strcat(concatenated, s2);
+	strcpy(concat, s1);
+	strcat(concat, s2);
 
-	return (concatenated);
+	return (concat);
 }
