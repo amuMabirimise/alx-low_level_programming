@@ -11,12 +11,22 @@ char *_strdup(char *str)
 {
 	size_t len = strlen(str);
 	char *duplicate;
+	int i = 0;
+	int r = 0;
 
 	if (str == NULL)
 		return NULL;
+	while (str[i] != '\0')
+		i++;
 	duplicate = (char *)malloc((len + 1) * sizeof(char));
 	if (duplicate == NULL)
 		return (NULL);
+
+	while (str[r] != '\0')
+	{
+		duplicate[r] = str[r];
+		r++;
+	}
 
 	strcpy(duplicate, str);
 	return (duplicate);
