@@ -2,7 +2,7 @@
 #define DOG_G
 
 /**
- * struc tog - the function  name
+ * struct dog - the function  name
  * @name: First member
  * @age:Second member
  * @owner: Second member
