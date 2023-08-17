@@ -9,13 +9,6 @@
  * Return: the number of nodes
  */
 
-struct dlistint_t
-{
-	int data;
-	struct dlistint_t* prev;
-	struct dlistint_t* next;
-};
-
 size_t print_dlistint(const struct dlistint_t *h)
 {
 	const struct dlistint_t *current = h;
