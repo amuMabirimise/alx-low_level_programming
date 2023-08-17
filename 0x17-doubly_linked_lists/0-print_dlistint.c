@@ -1,4 +1,5 @@
-#include "lists.h"
+#include <stdio.h>
+#include <stdlib.h>
 
 /**
  * print_dlistint - prints all the elements of a
@@ -15,15 +16,17 @@ struct dlistint_t
 	struct dlistint_t* next;
 };
 
-void size_t print_dlistint(const dlistint_t *h)
+size_t print_dlistint(const struct dlistint_t *h)
 {
-	struct dlistint_t* current = head;
+	const struct dlistint_t *current = h;
+	size_t node_count = 0;
 
-	while (current != NULL) 
+	while (current != NULL)
 	{
-	printf("%d -> ", current->data);
+	printf("%d\n", current->data);
 	current = current->next;
+	node_count++;
 	}
 
-	printf("NULL\n");
+	return (node_count);
 }
