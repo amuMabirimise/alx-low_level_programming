@@ -43,7 +43,7 @@ int mul(int a, int b)
  *
  * Return: Result of @a divided by @b
  */
-int custom_div(int a, int b)
+int div(int a, int b)
 {
 	return (a / b);
 }
