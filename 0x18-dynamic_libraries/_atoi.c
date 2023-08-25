@@ -20,4 +20,6 @@ int _atoi(char *s)
 		result = result * 10 + (*s - '0');
 		s++;
 	}
+	
+	return (sign * result);
 }

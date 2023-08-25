@@ -1,6 +1,6 @@
 #include "main.h"
 #include <stdio.h>
-#include  "_strlen.c"
+
 
 /**
  * main - check the code
