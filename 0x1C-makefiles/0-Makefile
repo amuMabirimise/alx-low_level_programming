@@ -2,27 +2,25 @@
 
 EXECUTABLE = school
 
-all: school
+all: $(EXECUTABLE)
 
-clean:
-	rm -f *.o
+install: $(EXECUTABLE)
+    cp $(EXECUTABLE) /usr/local/bin/
 
-install: school
-    cp school /usr/local/bin/
+uninstall: $(EXECUTABLE)
+    rm -f /usr/local/bin/$(EXECUTABLE)
 
-uninstall: school
-    rm -f /usr/local/bin/school
+test: $(EXECUTABLE)
+    ./$(EXECUTABLE)
 
-test: school
-    ./school
-
-docs: school
+docs: $(EXECUTABLE)
     doxygen Doxyfile
 
-archive: school
+archive: $(EXECUTABLE)
     tar -czvf myproject-1.0.tar.gz *
 
 %.o: %.c
     $(CC) $(CFLAGS) -MMD -c $< -o $@
 
-
+clean:
+	rm -f $(EXECUTABLE) $(OBJECTS)
