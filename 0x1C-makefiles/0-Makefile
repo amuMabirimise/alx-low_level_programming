@@ -1,0 +1,28 @@
+-include $(DEPS)
+
+EXECUTABLE = school
+
+all: school
+
+clean:
+	rm -f *.o
+
+install: school
+    cp school /usr/local/bin/
+
+uninstall: school
+    rm -f /usr/local/bin/school
+
+test: school
+    ./school
+
+docs: school
+    doxygen Doxyfile
+
+archive: school
+    tar -czvf myproject-1.0.tar.gz *
+
+%.o: %.c
+    $(CC) $(CFLAGS) -MMD -c $< -o $@
+
+
