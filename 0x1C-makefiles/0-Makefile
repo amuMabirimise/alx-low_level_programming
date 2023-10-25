@@ -1,7 +1,5 @@
 EXECUTABLE = school
 
-all: $(EXECUTABLE)
-
 SOURCES = main.c school.c
 
 OBJECTS = $(SOURCES:.c=.o)
@@ -10,24 +8,13 @@ CC = gcc
 
 CFLAGS = -Wall
 
-install: $(EXECUTABLE)
-    cp $(EXECUTABLE) /usr/local/bin/
+all: $(EXECUTABLE)
 
-uninstall: $(EXECUTABLE)
-    rm -f /usr/local/bin/$(EXECUTABLE)
-
-test: $(EXECUTABLE)
-    ./$(EXECUTABLE)
-
-docs: $(EXECUTABLE)
-    doxygen Doxyfile
-
-archive: $(EXECUTABLE)
-    tar -czvf myproject-1.0.tar.gz *
+$(EXECUTABLE): $(OBJECTS)
+	$(CC) $(CFLAGS) $(OBJECTS) -o $(EXECUTABLE)
 
 %.o: %.c
-    $(CC) $(CFLAGS) -MMD -c $< -o $@
+	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
 	rm -f $(EXECUTABLE) $(OBJECTS)
-
