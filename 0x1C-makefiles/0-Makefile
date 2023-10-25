@@ -4,6 +4,14 @@ EXECUTABLE = school
 
 all: $(EXECUTABLE)
 
+SOURCES = main.c school.c
+
+OBJECTS = $(SOURCES:.c=.o)
+
+CC = gcc
+
+CFLAGS = -Wall
+
 install: $(EXECUTABLE)
     cp $(EXECUTABLE) /usr/local/bin/
 
