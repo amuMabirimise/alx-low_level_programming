@@ -1,0 +1,31 @@
+CC = gcc
+
+CFLAGS = -Wall -Werror -Wextra -pedantic
+
+all: $(NAME)
+
+$(NAME): $(OBJ)
+	$(CC) $(CFLAGS) -o $(NAME) $(OBJ)
+
+clean:
+	$(RM) *~ \#*\# $(NAME)
+
+oclean:
+	$(RM) $(OBJ)
+
+fclean: clean oclean
+
+re: oclean all
+
+main.o: main.c m.h
+foo.o: foo.c m.h
+bar.o: bar.c m.h
+
+%.o: %.c
+	$(CC) $(CFLAGS) -c $<
+
+m.h:
+	@if [ ! -e m.h ]; then echo "m.h is missing"; exit 1; fi
+
+.PHONY: all clean oclean fclean re
+
